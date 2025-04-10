@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\Posts\CreatePostRequest;
+use App\Http\Requests\Posts\EditPostRequest;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function store(CreatePostRequest $request): Post
+    public function store(EditPostRequest $request): Post
     {
         return Post::fromRequest($request);
     }
 
-    public function patch(Post $post, CreatePostRequest $request): Post
+    public function patch(Post $post, EditPostRequest $request): Post
     {
         return $post->patchWithUserChanges($request->validated());
     }

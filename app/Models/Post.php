@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Http\Requests\Posts\CreatePostRequest;
+use App\Http\Requests\Posts\EditPostRequest;
 use Illuminate\Contracts\Support\Responsable;
 use Illuminate\Database\Eloquent\Model;
 
@@ -25,7 +25,7 @@ class Post extends Model implements Responsable
         return $this->refresh();
     }
 
-    public static function fromRequest(CreatePostRequest $request): self
+    public static function fromRequest(EditPostRequest $request): self
     {
         return Post::create([
             'user_id' => $request->user()->id,
