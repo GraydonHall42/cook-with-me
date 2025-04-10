@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Http\Requests\Posts\EditPostRequest;
 use Illuminate\Contracts\Support\Responsable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
 class Post extends Model implements Responsable
 {
@@ -25,15 +26,10 @@ class Post extends Model implements Responsable
         return $this->refresh();
     }
 
-    public static function fromRequest(EditPostRequest $request): self
+    public static function forUser(Request $request): self
     {
         return Post::create([
             'user_id' => $request->user()->id,
-            'title' => $request->title(),
-            'description' => $request->description(),
-            'recipe' => $request->recipe(),
-            'photos' => $request->photos(),
-            'links' => $request->links(),
         ]);
     }
 

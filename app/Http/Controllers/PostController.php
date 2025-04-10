@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function store(EditPostRequest $request): Post
+    public function store(Request $request): Post
     {
-        return Post::fromRequest($request);
+        return Post::forUser($request);
     }
 
     public function patch(Post $post, EditPostRequest $request): Post

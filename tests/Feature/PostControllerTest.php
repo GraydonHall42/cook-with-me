@@ -3,35 +3,14 @@
 use App\Domain\PostBuilder;
 use Illuminate\Testing\Fluent\AssertableJson;
 
-it('allows a user to create a post with all fields', function () {
+it('allows a user to create a post', function () {
     $user = $this->unitTestUser();
     $this->actingAs($user);
 
-    $postData = [
-        'title' => 'Test Post',
-        'description' => 'This is a test description.',
-        'recipe' => 'Test recipe instructions.',
-        'photos' => [ 'photo1.jpg', 'photo2.jpg' ],
-        'links' => [ 'https://example.com', 'https://anotherexample.com' ],
-    ];
-
-    $this->postJson(route('posts.create'), $postData)->assertOk()
-        ->assertJson(fn (AssertableJson $json) => $json->where('post.title', 'Test Post')
-            ->where('post.description', 'This is a test description.')
-            ->where('post.recipe', 'Test recipe instructions.')
-            ->where('post.photos', [ 'photo1.jpg', 'photo2.jpg' ])
-            ->where('post.links', [ 'https://example.com', 'https://anotherexample.com' ])
-        );
+    $this->postJson(route('posts.create'))->assertOk()
+        ->assertJson(fn (AssertableJson $json) => $json->where('post.user_id', $user->id));
 
     expect($user->posts()->count())->toBe(1);
-
-    $post = $user->posts()->first();
-
-    expect($post->title)->toBe('Test Post')
-        ->and($post->description)->toBe('This is a test description.')
-        ->and($post->recipe)->toBe('Test recipe instructions.')
-        ->and($post->photos)->toEqual([ 'photo1.jpg', 'photo2.jpg' ])
-        ->and($post->links)->toEqual([ 'https://example.com', 'https://anotherexample.com' ]);
 });
 
 it('allows a user to patch a post with updated fields', function () {
