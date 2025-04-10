@@ -76,7 +76,7 @@ it('returns all posts for a user', function () {
         );
 });
 
-it('ensures a user cannot access or patch a post that does not belong to them', function () {
+it('ensures a user cannot access, delete, or patch a post that does not belong to them', function () {
     $user_1 = User::factory()->create();
     $post = PostBuilder::start()
         ->forUser($user_1)
@@ -89,8 +89,26 @@ it('ensures a user cannot access or patch a post that does not belong to them', 
     $this->getJson(route('posts.show', $post))
         ->assertForbidden();
 
+    $this->deleteJson(route('posts.delete', $post))
+        ->assertForbidden();
+
     $this->patchJson(route('posts.update', $post), [
         'title' => 'Updated Title'
     ])->assertForbidden();
+});
+
+it('can delete a post for a user', function () {
+    $user = $this->unitTestUser();
+    $this->actingAs($user);
+
+    $post = PostBuilder::start()
+        ->forUser($user)
+        ->title('First Post')
+        ->build();
+
+   $this->deleteJson(route('posts.delete', $post))
+        ->assertNoContent();
+
+    expect($user->posts()->count())->toBe(0);
 });
 

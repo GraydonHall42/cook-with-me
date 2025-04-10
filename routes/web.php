@@ -15,6 +15,7 @@ Route::middleware('auth')->group(function () {
     Route::middleware(PostOwnership::class)->group(function(){
         Route::get('/posts/{post}', [ PostController::class, 'show' ])->name('posts.show');
         Route::patch('/posts/{post}', [ PostController::class, 'patch' ])->name('posts.update');
+        Route::delete('/posts/{post}', [ PostController::class, 'delete' ])->name('posts.delete');
     });
 });
 
