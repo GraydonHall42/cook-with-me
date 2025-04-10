@@ -1,6 +1,7 @@
 <?php
 
 use App\Domain\PostBuilder;
+use App\Models\User;
 use Illuminate\Testing\Fluent\AssertableJson;
 
 it('allows a user to create a post', function () {
@@ -50,7 +51,7 @@ it('allows a user to patch a post with updated fields', function () {
         ->and($post->links)->toEqual([ 'https://original.com' ]);
 });
 
-it('returns all posts for the authenticated user', function () {
+it('returns all posts for a user', function () {
     $user = $this->unitTestUser();
     $this->actingAs($user);
 
@@ -74,3 +75,22 @@ it('returns all posts for the authenticated user', function () {
             ->etc()
         );
 });
+
+it('ensures a user cannot access or patch a post that does not belong to them', function () {
+    $user_1 = User::factory()->create();
+    $post = PostBuilder::start()
+        ->forUser($user_1)
+        ->title('Title')
+        ->build();
+
+    $user_2 = User::factory()->create();
+    $this->actingAs($user_2);
+
+    $this->getJson(route('posts.show', $post))
+        ->assertForbidden();
+
+    $this->patchJson(route('posts.update', $post), [
+        'title' => 'Updated Title'
+    ])->assertForbidden();
+});
+
