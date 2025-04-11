@@ -100,7 +100,7 @@ it('can get a post by id', function () {
         ->title('First Post')
         ->build();
 
-    $this->getJson(route('posts.delete', $post))
+    $this->getJson(route('posts.show', $post))
         ->assertJson(fn (AssertableJson $json) => $json
             ->where('post.id', $post->id)
             ->where('post.title', 'First Post')
