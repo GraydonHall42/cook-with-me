@@ -1,0 +1,122 @@
+[
+    {
+        "title": "Chewy Chocolate Chip Cookies",
+        "description": "Soft and chewy chocolate chip cookies with crispy edges.",
+        "recipe": "To make these cookies, first preheat the oven to 350°F (175°C). Cream together 1 cup of butter, 3/4 cup of granulated sugar, and 3/4 cup of brown sugar. Add 2 eggs and 2 teaspoons of vanilla extract. Mix in 2 1/4 cups of all-purpose flour, 1 teaspoon of baking soda, and a pinch of salt. Fold in 2 cups of chocolate chips. Drop spoonfuls of dough onto a baking sheet and bake for 10-12 minutes.",
+        "photos": [
+            "https://picsum.photos/seed/cookies1/600/400",
+            "https://picsum.photos/seed/cookies2/600/400"
+        ],
+        "links": [
+            "https://preppykitchen.com/chewy-chocolate-chip-cookies/"
+        ]
+    },
+    {
+        "title": "Homemade Lasagna",
+        "description": "Classic lasagna with layers of pasta, meat sauce, and cheese.",
+        "recipe": "To make lasagna, first cook the lasagna noodles according to package directions. For the sauce, brown 1 lb of ground beef, then add 1 chopped onion, 2 cloves of garlic, and cook until softened. Stir in 1 can of tomato sauce, 1 can of crushed tomatoes, 1 tablespoon of dried oregano, and salt to taste. In a separate bowl, combine ricotta cheese, 1 egg, and 1/4 cup of Parmesan. Layer the noodles, sauce, and cheese mixture in a baking dish, then bake at 375°F (190°C) for 45 minutes.",
+        "photos": [
+            "https://picsum.photos/seed/lasagna1/600/400",
+            "https://picsum.photos/seed/lasagna2/600/400"
+        ],
+        "links": [
+            "https://preppykitchen.com/lasagna/"
+        ]
+    },
+    {
+        "title": "Lemon Bars",
+        "description": "Tangy and sweet lemon bars with a buttery crust.",
+        "recipe": "For the crust, mix 1 1/2 cups of flour, 1/2 cup of powdered sugar, and 1 cup of butter. Press into the bottom of a baking dish and bake at 350°F (175°C) for 20 minutes. For the filling, whisk together 4 eggs, 1 1/2 cups of sugar, 1/4 cup of flour, and 1/2 cup of lemon juice. Pour over the crust and bake for another 20 minutes.",
+        "photos": [
+            "https://picsum.photos/seed/lemonbars1/600/400",
+            "https://picsum.photos/seed/lemonbars2/600/400"
+        ],
+        "links": [
+            "https://preppykitchen.com/lemon-bars/"
+        ]
+    },
+    {
+        "title": "Skillet Cinnamon Rolls",
+        "description": "Soft and fluffy cinnamon rolls baked in a skillet.",
+        "recipe": "Mix 2 cups of flour, 1/4 cup of sugar, 1 packet of yeast, and a pinch of salt. Add 1/2 cup of warm milk, 1/4 cup of melted butter, and 1 egg. Knead until smooth and let rise for 1 hour. Roll the dough into a rectangle and spread with a mixture of 1/2 cup of brown sugar and 2 tablespoons of cinnamon. Roll up, slice, and bake in a skillet at 375°F (190°C) for 25 minutes.",
+        "photos": [
+            "https://picsum.photos/seed/cinnamonrolls1/600/400",
+            "https://picsum.photos/seed/cinnamonrolls2/600/400"
+        ],
+        "links": [
+            "https://preppykitchen.com/skillet-cinnamon-rolls/"
+        ]
+    },
+    {
+        "title": "Banana Bread",
+        "description": "Moist and tender banana bread with rich banana flavor.",
+        "recipe": "Mash 3 ripe bananas and mix with 1 cup of sugar, 1/2 cup of butter, 2 eggs, and 1 teaspoon of vanilla. In a separate bowl, combine 2 cups of flour, 1 teaspoon of baking soda, and 1/2 teaspoon of salt. Mix the dry ingredients into the wet mixture and bake at 350°F (175°C) for 60 minutes.",
+        "photos": [
+            "https://picsum.photos/seed/bananabread1/600/400",
+            "https://picsum.photos/seed/bananabread2/600/400"
+        ],
+        "links": [
+            "https://preppykitchen.com/banana-bread/"
+        ]
+    },
+    {
+        "title": "Red Velvet Cake",
+        "description": "Decadent red velvet cake with cream cheese frosting.",
+        "recipe": "For the cake, mix 2 1/2 cups of flour, 1 1/2 cups of sugar, 1 teaspoon of baking soda, 1 teaspoon of cocoa powder, and 1 teaspoon of salt. Add 2 eggs, 1 cup of buttermilk, 1/2 cup of vegetable oil, 2 tablespoons of red food coloring, and 1 teaspoon of vanilla. Bake at 350°F (175°C) for 30 minutes. Frost with cream cheese frosting.",
+        "photos": [
+            "https://picsum.photos/seed/redvelvet1/600/400",
+            "https://picsum.photos/seed/redvelvet2/600/400"
+        ],
+        "links": [
+            "https://preppykitchen.com/red-velvet-cake/"
+        ]
+    },
+    {
+        "title": "Pumpkin Pie",
+        "description": "Classic pumpkin pie with a flaky crust.",
+        "recipe": "Mix 1 can of pumpkin puree, 1 cup of heavy cream, 2/3 cup of brown sugar, 2 eggs, 1 teaspoon of cinnamon, 1/2 teaspoon of nutmeg, and 1/4 teaspoon of cloves. Pour into a prepared pie crust and bake at 425°F (220°C) for 15 minutes. Lower the heat to 350°F (175°C) and bake for an additional 45 minutes.",
+        "photos": [
+            "https://picsum.photos/seed/pumpkinpie1/600/400",
+            "https://picsum.photos/seed/pumpkinpie2/600/400"
+        ],
+        "links": [
+            "https://preppykitchen.com/pumpkin-pie/"
+        ]
+    },
+    {
+        "title": "Carrot Cake",
+        "description": "Moist carrot cake with cream cheese frosting.",
+        "recipe": "Mix 2 cups of flour, 1 1/2 teaspoons of baking soda, 1 teaspoon of cinnamon, and 1/2 teaspoon of salt. In a separate bowl, whisk together 4 eggs, 1 cup of sugar, and 1 cup of vegetable oil. Combine the wet and dry ingredients and fold in 3 cups of grated carrots. Bake at 350°F (175°C) for 30 minutes. Frost with cream cheese frosting.",
+        "photos": [
+            "https://picsum.photos/seed/carrotcake1/600/400",
+            "https://picsum.photos/seed/carrotcake2/600/400"
+        ],
+        "links": [
+            "https://preppykitchen.com/carrot-cake/"
+        ]
+    },
+    {
+        "title": "Apple Pie",
+        "description": "Traditional apple pie with a buttery crust.",
+        "recipe": "Toss 6 cups of peeled and sliced apples with 3/4 cup of sugar, 1 tablespoon of lemon juice, and 1/2 teaspoon of cinnamon. Pour into a prepared pie crust, top with another crust, and bake at 425°F (220°C) for 40-45 minutes.",
+        "photos": [
+            "https://picsum.photos/seed/applepie1/600/400",
+            "https://picsum.photos/seed/applepie2/600/400"
+        ],
+        "links": [
+            "https://preppykitchen.com/apple-pie/"
+        ]
+    },
+    {
+        "title": "Fudgy Brownies",
+        "description": "Rich and gooey fudgy brownies.",
+        "recipe": "Melt 1/2 cup of butter and mix with 1 cup of sugar, 2 eggs, and 1 teaspoon of vanilla. Stir in 1/2 cup of cocoa powder, 1/2 cup of flour, and a pinch of salt. Bake at 350°F (175°C) for 20-25 minutes.",
+        "photos": [
+            "https://picsum.photos/seed/brownies1/600/400",
+            "https://picsum.photos/seed/brownies2/600/400"
+        ],
+        "links": [
+            "https://preppykitchen.com/brownies/"
+        ]
+    }
+]
