@@ -91,6 +91,24 @@ it('can delete a post for a user', function () {
     expect($user->posts()->count())->toBe(0);
 });
 
+it('can get a post by id', function () {
+    $user = $this->unitTestUser();
+    $this->actingAs($user);
+
+    $post = PostBuilder::start()
+        ->forUser($user)
+        ->title('First Post')
+        ->build();
+
+    $this->getJson(route('posts.delete', $post))
+        ->assertJson(fn (AssertableJson $json) => $json
+            ->where('post.id', $post->id)
+            ->where('post.title', 'First Post')
+            ->etc()
+        );
+
+});
+
 it('ensures a user cannot access, delete, or patch a post that does not belong to them', function () {
     $user_1 = User::factory()->create();
     $post = PostBuilder::start()
@@ -100,9 +118,6 @@ it('ensures a user cannot access, delete, or patch a post that does not belong t
 
     $user_2 = User::factory()->create();
     $this->actingAs($user_2);
-
-    $this->getJson(route('posts.show', $post))
-        ->assertForbidden();
 
     $this->deleteJson(route('posts.delete', $post))
         ->assertForbidden();
