@@ -4,11 +4,13 @@ namespace App\Models;
 
 use App\Http\Requests\Posts\EditPostRequest;
 use Illuminate\Contracts\Support\Responsable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
 class Post extends Model implements Responsable
 {
+    use HasFactory;
     protected $guarded = [];
 
     protected function casts(): array
