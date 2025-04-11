@@ -9,7 +9,7 @@ use Illuminate\Http\Response;
 
 class PostController extends Controller
 {
-    public function store(Request $request): Post
+    public function create(Request $request): Post
     {
         return Post::forUser($request);
     }

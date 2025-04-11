@@ -8,7 +8,7 @@ Route::inertia('/', 'Welcome')->name('home');
 Route::inertia('dashboard', 'Dashboard')->middleware([ 'auth' ])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    Route::post('/posts', [ PostController::class, 'store' ])->name('posts.create');
+    Route::post('/posts', [ PostController::class, 'create' ])->name('posts.create');
     Route::get('/posts', [ PostController::class, 'list' ])->name('posts.list');
 
     // protected post routes
