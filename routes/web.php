@@ -4,8 +4,8 @@ use App\Http\Controllers\PostController;
 use App\Http\Middleware\PostOwnership;
 use Illuminate\Support\Facades\Route;
 
-Route::inertia('/', 'Welcome')->name('home');
-Route::inertia('dashboard', 'Dashboard')->middleware([ 'auth' ])->name('dashboard');
+Route::inertia('/', 'welcome')->name('home');
+Route::inertia('dashboard', 'dashboard')->middleware([ 'auth' ])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::post('/posts', [ PostController::class, 'create' ])->name('posts.create');
